@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om Chanukya Traders - Final Presentation</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="dark">
+
+  <!-- Toast Notifications -->
+  <div id="toast" style="position: fixed; top: 20px; right: 20px; background: var(--accent-gradient); color: #0a0b0e; padding: 12px 24px; border-radius: 8px; font-weight: bold; box-shadow: var(--shadow-lg); opacity: 0; pointer-events: none; transition: opacity 0.3s ease, transform 0.3s ease; transform: translateY(-20px); z-index: 9999;"></div>
+
+  <div class="presentation-container">
+    
+    <!-- HUD Header -->
+    <header class="hud-header">
+      <div class="brand-section">
+        <div class="brand-logo">ॐ</div>
+        <div>
+          <div class="brand-name">Om Chanukya Traders</div>
+          <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0;">Final Project Presentation</p>
+        </div>
+      </div>
+      <div class="controls-right">
+        <button class="hud-btn" id="themeToggleBtn" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i> Theme
+        </button>
+        <button class="hud-btn" id="presenterModeBtn" title="Launch Presenter Console">
+          <i class="fa-solid fa-chalkboard-user"></i> Presenter Mode
+        </button>
+      </div>
+    </header>
+
+    <!-- Slides Wrapper -->
+    <main class="slides-wrapper transition-slide" id="slidesWrapper">
+
+      <!-- SLIDE 01: Title Slide -->
+      <section class="slide active" id="slide-1">
+        <div class="fade-in-el" style="text-align: center; max-width: 900px;">
+          <div style="font-size: 4rem; color: var(--accent-primary); margin-bottom: 1rem; filter: drop-shadow(0 0 15px var(--accent-glow));">ॐ</div>
+          <h1 style="font-size: 3.8rem; margin-bottom: 0.5rem;">Om Chanukya Traders</h1>
+          <p style="font-family: var(--font-heading); font-size: 1.8rem; color: var(--accent-primary); font-weight: 500; margin-bottom: 2rem;">Live Counter Product Catalog & Availability System</p>
+          <div style="width: 100px; height: 3px; background: var(--accent-gradient); margin: 2rem auto;"></div>
+          <div style="display: flex; justify-content: center; gap: 3rem; margin-top: 2rem;">
+            <div>
+              <p style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted);">Presenter</p>
+              <p style="font-weight: 600; font-size: 1.1rem;">Intern Developer</p>
+            </div>
+            <div>
+              <p style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted);">Organization</p>
+              <p style="font-weight: 600; font-size: 1.1rem;">Google DeepMind Team</p>
+            </div>
+            <div>
+              <p style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted);">Date</p>
+              <p style="font-weight: 600; font-size: 1.1rem;">June 2026</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 02: Journey Recap -->
+      <section class="slide" id="slide-2">
+        <div style="width: 100%; max-width: 1100px;">
+          <h2>Project Journey Recap</h2>
+          <p style="margin-bottom: 2.5rem;">A brief look at the trajectory of the internship project from inception to delivery.</p>
+          <div class="grid-3">
+            <div class="glass-card">
+              <div style="font-size: 2.5rem; color: var(--accent-primary); margin-bottom: 1rem;"><i class="fa-solid fa-magnifying-glass"></i></div>
+              <div class="card-title">1. Problem Identified</div>
+              <p class="card-desc">Retail customers face high friction inquiring about product sizes and stocks at counter displays, leading to long cashier queues and store staff fatigue.</p>
+            </div>
+            <div class="glass-card">
+              <div style="font-size: 2.5rem; color: var(--accent-primary); margin-bottom: 1rem;"><i class="fa-solid fa-clipboard-question"></i></div>
+              <div class="card-title">2. In-Store Research</div>
+              <p class="card-desc">Conducted counter observations: 42% of customer queries focused on size availability. Staff spent an average of 3 minutes checking rear stock rooms per inquiry.</p>
+            </div>
+            <div class="glass-card">
+              <div style="font-size: 2.5rem; color: var(--accent-primary); margin-bottom: 1rem;"><i class="fa-solid fa-laptop-code"></i></div>
+              <div class="card-title">3. System Designed</div>
+              <p class="card-desc">Designed a lightweight, mobile-first web portal requiring zero installs. Customers scan counter QR codes to instantly see live, real-time stock lists.</p>
+            </div>
+          </div>
+          <div class="highlight-box" style="margin-top: 2rem;">
+            <p><i class="fa-solid fa-quote-left"></i> Key Vision: Enable friction-free retail shopping by placing real-time inventory at the customer's fingertips.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 03: Final System Overview -->
+      <section class="slide" id="slide-3">
+        <div style="width: 100%; max-width: 1100px;">
+          <h2>Final System Overview</h2>
+          <p style="margin-bottom: 1.5rem;">A high-level summary of features planned, delivered, and scoping outcomes.</p>
+          
+          <div class="grid-2">
+            <div>
+              <div class="glass-card" style="margin-bottom: 1.5rem;">
+                <div class="card-title"><i class="fa-solid fa-circle-check" style="color: var(--success)"></i> Outcome Statement</div>
+                <p class="card-desc" style="font-size: 1.1rem; line-height: 1.6; color: var(--text-primary);">
+                  Delivered a fully functional, mobile-responsive Live Store Product Catalog featuring instant search autocompletion, category breakdowns, a secure Admin Stock Portal with an indicator mode, and custom counter QR code generators.
+                </p>
+              </div>
+              <div class="glass-card">
+                <div class="card-title"><i class="fa-solid fa-circle-info" style="color: var(--info)"></i> Scope Adjustment (Descope)</div>
+                <p class="card-desc">
+                  <strong>Descoped Feature:</strong> Customer checkout/online payments.<br>
+                  <strong>Rationale:</strong> The store operates as a physical counter retail shop. Customers inspect products live; adding a digital checkout would conflict with physical sales flow and POS registers.
+                </p>
+              </div>
+            </div>
+
+            <div class="glass-card" style="height: 100%;">
+              <div class="card-title"><i class="fa-solid fa-list-check"></i> Deliverables Tracker</div>
+              <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem;">
+                <thead>
+                  <tr style="border-bottom: 2px solid var(--border-color); text-align: left;">
+                    <th style="padding: 10px 5px;">Module / Feature</th>
+                    <th style="padding: 10px 5px;">Planned</th>
+                    <th style="padding: 10px 5px;">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding: 10px 5px;">Customer Stock Viewer Portal</td>
+                    <td style="padding: 10px 5px;">Yes</td>
+                    <td style="padding: 10px 5px; color: var(--success); font-weight: 600;"><i class="fa-solid fa-check"></i> Completed</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding: 10px 5px;">Autocomplete Search & Filters</td>
+                    <td style="padding: 10px 5px;">Yes</td>
+                    <td style="padding: 10px 5px; color: var(--success); font-weight: 600;"><i class="fa-solid fa-check"></i> Completed</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding: 10px 5px;">Secure Admin Stock Editor</td>
+                    <td style="padding: 10px 5px;">Yes</td>
+                    <td style="padding: 10px 5px; color: var(--success); font-weight: 600;"><i class="fa-solid fa-check"></i> Completed</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding: 10px 5px;">Counter QR Code Generator</td>
+                    <td style="padding: 10px 5px;">Yes</td>
+                    <td style="padding: 10px 5px; color: var(--success); font-weight: 600;"><i class="fa-solid fa-check"></i> Completed</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding: 10px 5px;">Digital Payments / Checkout</td>
+                    <td style="padding: 10px 5px;">Yes</td>
+                    <td style="padding: 10px 5px; color: var(--warning); font-weight: 600;"><i class="fa-solid fa-scissors"></i> Descoped</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 04: Presentation Map & Timeline -->
+      <section class="slide" id="slide-4">
+        <div class="timeline-slider-container">
+          <h2>Presentation Structure & Timeline</h2>
+          <p>Drag the slider below to budget time and explore the core slide breakdown (15-20 min target).</p>
+          
+          <div class="timeline-cards">
+            <div class="timeline-card active" data-step="0">
+              <div class="t-time">1 Min</div>
+              <div class="t-name">Recap</div>
+            </div>
+            <div class="timeline-card" data-step="1">
+              <div class="t-time">1 Min</div>
+              <div class="t-name">Overview</div>
+            </div>
+            <div class="timeline-card" data-step="2">
+              <div class="t-time">6 Min</div>
+              <div class="t-name">Live Demo</div>
+            </div>
+            <div class="timeline-card" data-step="3">
+              <div class="t-time">3 Min</div>
+              <div class="t-name">Arch & Code</div>
+            </div>
+            <div class="timeline-card" data-step="4">
+              <div class="t-time">2 Min</div>
+              <div class="t-name">Challenges</div>
+            </div>
+            <div class="timeline-card" data-step="5">
+              <div class="t-time">2 Min</div>
+              <div class="t-name">Learnings</div>
+            </div>
+          </div>
+
+          <div class="timeline-range-wrapper">
+            <input type="range" min="0" max="5" value="0" class="timeline-range" id="timelineSlider">
+            <p style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; margin-top: 5px;">Slider Step Control</p>
+          </div>
+
+          <div class="timeline-description glass-card" id="timelineText">
+            Select a timeline phase to see breakdown details.
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 05: Live Demo Part 1 -->
+      <section class="slide" id="slide-5">
+        <div style="width: 100%; max-width: 1100px;">
+          <h2>Live Demo Part 1: Customer Portal Flow</h2>
+          <p style="margin-bottom: 2rem;">Walking through the catalog interface from a customer's perspective.</p>
+          <div class="grid-2">
+            <div class="glass-card" style="display: flex; flex-direction: column; gap: 1.2rem;">
+              <div class="card-title"><i class="fa-solid fa-mobile-screen-button"></i> Mobile Customer Flow</div>
+              <ul class="slide-list">
+                <li><strong>Scan & Load:</strong> Customer scans a physical counter QR code using their mobile camera.</li>
+                <li><strong>Category Direct Mapping:</strong> Directs them to a pre-filtered page displaying items specific to that counter (e.g. Shirts counter shows only Shirts catalog).</li>
+                <li><strong>Instant Autocomplete Search:</strong> Typing in the search bar gives live suggestion popups, minimizing keystrokes on mobile.</li>
+                <li><strong>Real-time Stock Badges:</strong> Products display "In Stock" (green) or "Out of Stock" (red) badge labels immediately.</li>
+              </ul>
+            </div>
+            <div class="glass-card" style="display: flex; justify-content: center; align-items: center; min-height: 300px; flex-direction: column; text-align: center;">
+              <!-- Simulated Web Screen Graphic -->
+              <div style="width: 100%; max-width: 320px; border: 2px solid var(--border-color); border-radius: 20px; padding: 15px; background: var(--bg-secondary); box-shadow: var(--shadow-lg);">
+                <div style="height: 15px; border-bottom: 1px solid var(--border-color); margin-bottom: 15px; display: flex; justify-content: space-between; font-size: 0.65rem; color: var(--text-muted);">
+                  <span>Om Catalog</span>
+                  <span><i class="fa-solid fa-wifi"></i> <i class="fa-solid fa-battery-three-quarters"></i></span>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); border-radius: 8px; padding: 8px; margin-bottom: 12px; font-size: 0.75rem; text-align: left; display: flex; align-items: center; gap: 5px;">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <span style="color: var(--accent-primary); font-weight: bold; border-right: 1px solid;">shi</span>
+                </div>
+                <div style="background: var(--bg-card); border: 1px solid var(--accent-primary); border-radius: 6px; padding: 8px; font-size: 0.7rem; text-align: left; margin-bottom: 12px; box-shadow: 0 0 10px var(--accent-glow);">
+                  <div style="font-weight: bold; color: var(--accent-primary);">Shirts Counter Suggestions</div>
+                  <div style="padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">Cotton Formal Shirt - XL</div>
+                  <div style="padding: 4px 0;">Casual Printed Shirt - M</div>
+                </div>
+                <div style="border: 1px solid var(--border-color); border-radius: 8px; padding: 8px; text-align: left; font-size: 0.7rem;">
+                  <div style="display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 4px;">
+                    <span>Formal Linen Shirt</span>
+                    <span style="color: var(--success); font-weight: bold;">In Stock</span>
+                  </div>
+                  <div style="color: var(--text-secondary); font-size: 0.6rem;">Sizes: L, XL | Brand: Chanukya</div>
+                </div>
+              </div>
+              <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 10px;">Visual representation of the customer autocomplete experience</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 06: Live Demo Part 2 -->
+      <section class="slide" id="slide-6">
+        <div style="width: 100%; max-width: 1100px;">
+          <h2>Live Demo Part 2: Secure Admin Portal</h2>
+          <p style="margin-bottom: 2rem;">Stock editing flow and Counter QR code generation.</p>
+          <div class="grid-2">
+            <div class="glass-card" style="display: flex; flex-direction: column; gap: 1.2rem;">
+              <div class="card-title"><i class="fa-solid fa-user-shield"></i> Merchant & Admin Flows</div>
+              <ul class="slide-list">
+                <li><strong>Secure Access:</strong> Store manager signs in using a dedicated password modal.</li>
+                <li><strong>Active Indicator Mode:</strong> Once authenticated, a prominent header alert signals that the browser session is in "Admin Mode" with an explicit Exit button.</li>
+                <li><strong>Quick Stock Toggle:</strong> Allows toggling product stocks on/off with a single click, or inputting new quantity values.</li>
+                <li><strong>Counter QR Code Print:</strong> Allows printing custom QR codes mapped directly to categories to attach to physical hangers/shelves.</li>
+              </ul>
+            </div>
+            <div class="glass-card" style="display: flex; justify-content: center; align-items: center; min-height: 300px; flex-direction: column; text-align: center;">
+              <!-- Simulated Web Screen Graphic for Admin -->
+              <div style="width: 100%; max-width: 320px; border: 2px solid var(--accent-primary); border-radius: 20px; padding: 15px; background: var(--bg-secondary); box-shadow: 0 0 15px var(--accent-glow);">
+                <div style="height: 18px; border-bottom: 1px solid var(--border-color); margin-bottom: 12px; display: flex; justify-content: space-between; font-size: 0.65rem;">
+                  <span style="color: var(--accent-primary); font-weight: bold;"><i class="fa-solid fa-user-shield"></i> ADMIN ACTIVE</span>
+                  <span style="background: var(--accent-primary); color: #000; padding: 0 4px; border-radius: 2px; font-weight: bold; cursor: pointer;">Exit</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 10px; text-align: left; font-size: 0.75rem; margin-bottom: 10px;">
+                  <div style="font-weight: bold; margin-bottom: 5px;">Modify Linen Shirt Stock</div>
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 5px;">
+                    <span>Stock Status:</span>
+                    <span style="background: var(--success); color: white; padding: 2px 6px; border-radius: 10px; font-size: 0.65rem;">Available</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 5px;">
+                    <span>Quantity:</span>
+                    <input type="number" value="18" style="width: 50px; background: #000; color: white; border: 1px solid var(--border-color); text-align: center; font-size: 0.7rem; padding: 2px;">
+                  </div>
+                </div>
+                <button style="width: 100%; background: var(--accent-gradient); color: #000; border: none; padding: 6px; border-radius: 6px; font-size: 0.75rem; font-weight: bold;"><i class="fa-solid fa-print"></i> Generate Counter QR</button>
+              </div>
+              <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 10px;">Admin stock console mockup</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 07: System Architecture -->
+      <section class="slide" id="slide-7">
+        <div style="width: 100%; max-width: 1100px;">
+          <h2>System Architecture</h2>
+          <p style="margin-bottom: 2rem;">The as-built component layout, detailing communication flows across modules.</p>
+          
+          <div class="arch-grid">
+            
+            <div class="arch-node">
+              <div class="arch-node-title"><i class="fa-solid fa-mobile-screen"></i> Client Web SPA</div>
+              <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 10px;">Vanilla HTML5/JS / CSS3</p>
+              <div style="text-align: left; font-size: 0.75rem; border-top: 1px solid var(--border-color); padding-top: 8px; color: var(--text-muted);">
+                - Search Suggestion Module<br>
+                - Category Routing Manager<br>
+                - Responsive HSL UI Styles
+              </div>
+            </div>
+
+            <div class="arch-node accented">
+              <div class="arch-flow-arrow first">
+                <div class="arch-flow-label">HTTPS</div>
+              </div>
+              <div class="arch-node-title"><i class="fa-solid fa-shield-halved"></i> App Controller / Store Logic</div>
+              <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 10px;">LocalStorage / Session State</p>
+              <div style="text-align: left; font-size: 0.75rem; border-top: 1px solid var(--border-color); padding-top: 8px; color: var(--text-muted);">
+                - Admin Auth Verifier<br>
+                - Real-time catalog cache<br>
+                - QR generator SVG parser
+              </div>
+              <div class="arch-flow-arrow" style="right: -40px;">
+                <div class="arch-flow-label">LocalState</div>
+              </div>
+            </div>
+
+            <div class="arch-node">
+              <div class="arch-node-title"><i class="fa-solid fa-database"></i> Product Store / JSON DB</div>
+              <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 10px;">Schema-driven Persistence</p>
+              <div style="text-align: left; font-size: 0.75rem; border-top: 1px solid var(--border-color); padding-top: 8px; color: var(--text-muted);">
+                - Products collection<br>
+                - Category index tags<br>
+                - Transactional state maps
+              </div>
+            </div>
+
+          </div>
+
+          <div class="highlight-box" style="margin-top: 2rem;">
+            <p><strong>Architecture Highlight:</strong> Serverless design utilizing LocalStorage synchronization allows complete offline-capable capabilities for store displays with zero infrastructure upkeep cost.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 08: Database Design -->
+      <section class="slide" id="slide-8">
+        <div class="erd-container">
+          <h2>Database Design (ERD Schema)</h2>
+          <p style="margin-bottom: 0.5rem; text-align: center;">Interactive ER Schema. Click an entity table to inspect its schema and design decisions.</p>
+          
+          <div class="erd-layout">
+            
+            <div class="erd-entity active" id="ent-product">
+              <div class="entity-header">Product</div>
+              <ul class="entity-attrs">
+                <li><span>id (PK)</span> <span class="key-type">PK</span></li>
+                <li><span>name</span> <span class="data-type">String</span></li>
+                <li><span>brand</span> <span class="data-type">String</span></li>
+                <li><span>category_id (FK)</span> <span class="key-type">FK</span></li>
+                <li><span>price</span> <span class="data-type">Float</span></li>
+                <li><span>stock_qty</span> <span class="data-type">Int</span></li>
+                <li><span>is_available</span> <span class="data-type">Bool</span></li>
+              </ul>
+            </div>
+
+            <div class="erd-entity" id="ent-category">
+              <div class="entity-header">Category</div>
+              <ul class="entity-attrs">
+                <li><span>id (PK)</span> <span class="key-type">PK</span></li>
+                <li><span>name</span> <span class="data-type">String</span></li>
+                <li><span>counter_code</span> <span class="data-type">String</span></li>
+              </ul>
+            </div>
+
+            <div class="erd-entity" id="ent-admin">
+              <div class="entity-header">AdminCredential</div>
+              <ul class="entity-attrs">
+                <li><span>id (PK)</span> <span class="key-type">PK</span></li>
+                <li><span>username</span> <span class="data-type">String</span></li>
+                <li><span>password_hash</span> <span class="data-type">String</span></li>
+                <li><span>last_login</span> <span class="data-type">DateTime</span></li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="erd-explanation" id="erdExplanation">
+            <strong>Normalized Database Structure:</strong> Selected a normalized schema separating `Category` from `Product`. This allows physical store counters to map directly to a static `counter_code` category, making QR links resilient even if category details are modified.
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 09: Code Highlight -->
+      <section class="slide" id="slide-9">
+        <div style="width: 100%; max-width: 1100px;">
+          <h2>Code Highlight: Real-time Autocomplete Dropdown</h2>
+          <p style="margin-bottom: 1.5rem;">Custom search query handler highlighting technical implementation without external dependencies.</p>
+          
+          <div class="code-split">
+            <div class="code-container">
+              <pre>
+<span class="comment">// Search input event listener with debounce</span>
+<span class="keyword">function</span> <span class="function">initSearchSuggestions</span>() {
+  <span class="keyword">const</span> searchInput = document.<span class="function">getElementById</span>(<span class="string">'searchBar'</span>);
+  <span class="keyword">let</span> debounceTimeout;
+
+  searchInput.<span class="function">addEventListener</span>(<span class="string">'input'</span>, (e) => {
+    <span class="function">clearTimeout</span>(debounceTimeout);
+    <span class="keyword">const</span> query = e.target.value.<span class="function">trim</span>().<span class="function">toLowerCase</span>();
+
+    debounceTimeout = <span class="function">setTimeout</span>(() => {
+      <span class="keyword">if</span> (query.length < <span class="number">2</span>) {
+        <span class="function">hideDropdown</span>();
+        <span class="keyword">return</span>;
+      }
+      <span class="keyword">const</span> filtered = products.<span class="function">filter</span>(p => 
+        p.name.<span class="function">toLowerCase</span>().<span class="function">includes</span>(query) ||
+        p.category.<span class="function">toLowerCase</span>().<span class="function">includes</span>(query)
+      );
+      <span class="function">renderSuggestions</span>(filtered);
+    }, <span class="number">200</span>); <span class="comment">// 200ms debounce buffer</span>
+  });
+}</pre>
+            </div>
+            
+            <div class="explanation-side">
+              <div class="glass-card">
+                <div class="card-title"><i class="fa-solid fa-code"></i> Why this is interesting</div>
+                <p class="card-desc" style="margin-bottom: 10px;">
+                  Instead of querying the database on every character stroke (which causes heavy network loads and UI stuttering on mobile), we implemented a lightweight local cache check with a 200ms debounce.
+                </p>
+                <p class="card-desc">
+                  This guarantees the catalog page renders suggestions in under 15ms after typing pauses, assuring a premium customer experience even on spotty store cellular networks.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 10: Technical Challenge 1 -->
+      <section class="slide" id="slide-10">
+        <div style="width: 100%; max-width: 1100px;">
+          <h2>Technical Challenges & Solutions (Part 1)</h2>
+          <p style="margin-bottom: 2.5rem;">Overcoming real-time search performance and rendering constraints.</p>
+          <div class="grid-2">
+            <div class="glass-card">
+              <div class="card-title" style="color: var(--error);"><i class="fa-solid fa-triangle-exclamation"></i> Challenge: Search Stuttering</div>
+              <p class="card-desc" style="margin-bottom: 12px;"><strong>The Problem:</strong> On mobile screens, rapid keystrokes led to laggy DOM updates in the catalog list, freezing the keyboard.</p>
+              <p class="card-desc" style="margin-bottom: 12px;"><strong>First Attempt:</strong> Fetching and redrawing all products on each keystroke (failed due to high DOM write operations).</p>
+              <p class="card-desc"><strong>Resolution:</strong> Implemented a DocumentFragment container to render suggestion dropdown lists offline, swapping in the complete DOM node in a single write operation.</p>
+            </div>
+            <div class="glass-card">
+              <div class="card-title" style="color: var(--success);"><i class="fa-solid fa-award"></i> The Learning Outcome</div>
+              <p class="card-desc" style="margin-bottom: 12px;">This challenge highlighted that DOM updates are the primary bottleneck in mobile web rendering, not JavaScript computation speed.</p>
+              <p class="card-desc">Applying DocumentFragments and decoupling UI paint operations from search queries resolved keyboard freeze entirely, dropping search rendering speed from 240ms to 8ms.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 11: Technical Challenge 2 -->
+      <section class="slide" id="slide-11">
+        <div style="width: 100%; max-width: 1100px;">
+          <h2>Technical Challenges & Solutions (Part 2)</h2>
+          <p style="margin-bottom: 2.5rem;">Implementing counter-level QR code generation and printing.</p>
+          <div class="grid-2">
+            <div class="glass-card">
+              <div class="card-title" style="color: var(--error);"><i class="fa-solid fa-qrcode"></i> Challenge: Blurry QR Codes</div>
+              <p class="card-desc" style="margin-bottom: 12px;"><strong>The Problem:</strong> When managers printed out the generated QR codes, barcode scanners on phones failed to read them due to canvas image blur when scaling.</p>
+              <p class="card-desc" style="margin-bottom: 12px;"><strong>First Attempt:</strong> Exporting HTML5 canvas nodes to PNG/JPEG (blurry on high-res store laser printers).</p>
+              <p class="card-desc"><strong>Resolution:</strong> Swapped to generating the QR code layout entirely as an inline SVG tag with mathematical vectors, accompanied by print CSS variables.</p>
+            </div>
+            <div class="glass-card">
+              <div class="card-title" style="color: var(--success);"><i class="fa-solid fa-print"></i> The Print Resolution</div>
+              <p class="card-desc" style="margin-bottom: 12px;">SVG files scale infinitely without losing quality. We integrated a dedicated `@media print` rule styling the printable screen.</p>
+              <p class="card-desc">This hides dashboard sidebars and headers, exporting a perfectly sharp, centered vector QR card with matching store counter branding ready to cut and display.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 12: Testing & Validation -->
+      <section class="slide" id="slide-12">
+        <div style="width: 100%; max-width: 1100px;">
+          <h2>Testing & Validation Evidence</h2>
+          <p style="margin-bottom: 2rem;">Comprehensive quality assurance verification performed prior to closing delivery.</p>
+          
+          <div class="glass-card" style="margin-bottom: 1.5rem;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+              <thead>
+                <tr style="border-bottom: 2px solid var(--border-color);">
+                  <th style="padding: 10px;">Module Tested</th>
+                  <th style="padding: 10px;">Verification Method</th>
+                  <th style="padding: 10px;">Target Constraint</th>
+                  <th style="padding: 10px;">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                  <td style="padding: 12px 10px; font-weight: 600;">Customer Search Bar</td>
+                  <td style="padding: 12px 10px;">Manual input variations & keyboard check</td>
+                  <td style="padding: 12px 10px;">Render suggestions in &lt; 20ms</td>
+                  <td style="padding: 12px 10px; color: var(--success); font-weight: bold;"><i class="fa-solid fa-check"></i> Passed (8ms)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                  <td style="padding: 12px 10px; font-weight: 600;">QR Redirect Routing</td>
+                  <td style="padding: 12px 10px;">Mobile scans across Android / iOS devices</td>
+                  <td style="padding: 12px 10px;">Load and auto-filter correct counter</td>
+                  <td style="padding: 12px 10px; color: var(--success); font-weight: bold;"><i class="fa-solid fa-check"></i> Passed</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                  <td style="padding: 12px 10px; font-weight: 600;">Admin Mode Toggle</td>
+                  <td style="padding: 12px 10px;">Auth session expiration check</td>
+                  <td style="padding: 12px 10px;">Block modifications on session exit</td>
+                  <td style="padding: 12px 10px; color: var(--success); font-weight: bold;"><i class="fa-solid fa-check"></i> Passed</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                  <td style="padding: 12px 10px; font-weight: 600;">Layout Responsiveness</td>
+                  <td style="padding: 12px 10px;">Chrome DevTools responsive layout scans</td>
+                  <td style="padding: 12px 10px;">Zero overflow down to 320px width</td>
+                  <td style="padding: 12px 10px; color: var(--success); font-weight: bold;"><i class="fa-solid fa-check"></i> Passed</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="grid-2">
+            <div class="glass-card" style="padding: 1.2rem;">
+              <div class="card-title" style="font-size: 1.1rem; color: var(--warning);"><i class="fa-solid fa-bug"></i> Bug Resolved: Safari CSS Height</div>
+              <p class="card-desc" style="font-size: 0.85rem;">In iOS Safari, the `100vh` page height caused footer buttons to hide under the address bar. Fixed by utilizing CSS custom properties for `100dvh` (dynamic viewport height).</p>
+            </div>
+            <div class="glass-card" style="padding: 1.2rem;">
+              <div class="card-title" style="font-size: 1.1rem; color: var(--warning);"><i class="fa-solid fa-bug"></i> Bug Resolved: Search Spaces</div>
+              <p class="card-desc" style="font-size: 0.85rem;">Typing trailing spaces in the search bar (e.g. "shirts ") caused empty results. Fixed by trimming trailing spaces from the query before running search logic.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 13: Learnings & Growth -->
+      <section class="slide" id="slide-13">
+        <div style="width: 100%; max-width: 1100px;">
+          <h2>Learnings & Personal Growth</h2>
+          <p style="margin-bottom: 2.5rem;">Key takeaways from both a software engineering and professional perspective.</p>
+          <div class="grid-2">
+            <div class="glass-card" style="height: 100%;">
+              <div class="card-title"><i class="fa-solid fa-laptop-code" style="color: var(--accent-primary);"></i> Technical Engineering Learnings</div>
+              <ul class="slide-list" style="margin-top: 1rem;">
+                <li><strong>Vanilla JS Strength:</strong> Gained deep appreciation for DOM operations, understanding that massive web frameworks are not always required for high-speed mobile pages.</li>
+                <li><strong>Mobile-First Optimization:</strong> Designing around cellular data speeds forced lightweight caching and minimal asset sizing (SVG vs PNG).</li>
+                <li><strong>Secure Offline States:</strong> Learning how to utilize local persistence storage safely while preventing client-side data leaks.</li>
+              </ul>
+            </div>
+            <div class="glass-card" style="height: 100%;">
+              <div class="card-title"><i class="fa-solid fa-briefcase" style="color: var(--accent-primary);"></i> Professional & Retail Insights</div>
+              <ul class="slide-list" style="margin-top: 1rem;">
+                <li><strong>UX in Retail:</strong> Customer attention span in a busy physical store is extremely brief. Clean simplicity always wins over complex multi-step features.</li>
+                <li><strong>Iterative Alignment:</strong> Regular client syncs helped identify that online checkout was unnecessary, preventing wasted weeks of backend development.</li>
+                <li><strong>Diligence & Closure:</strong> Recognizing that code is only finished when testing, architecture layouts, and code reviews are completely documented.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 14: Limitations & Future Scope -->
+      <section class="slide" id="slide-14">
+        <div style="width: 100%; max-width: 1100px;">
+          <h2>System Limitations & Future Scope</h2>
+          <p style="margin-bottom: 2.5rem;">Honest reflections on what the current system lacks and plans for future updates.</p>
+          <div class="grid-2">
+            <div class="glass-card" style="height: 100%;">
+              <div class="card-title" style="color: var(--warning);"><i class="fa-solid fa-ban"></i> Current System Limitations</div>
+              <ul class="slide-list" style="margin-top: 1rem;">
+                <li><strong>Manual Inventory Sync:</strong> Stock levels must be updated manually by managers inside the Admin Console, which is prone to human typing errors.</li>
+                <li><strong>Lack of Multi-Store Support:</strong> The system is configured for a single storefront instance and does not separate warehouse reserves from display shelf stock.</li>
+                <li><strong>Local Cache Persistence:</strong> Admin sessions depend on local browser state caches rather than persistent server tokens.</li>
+              </ul>
+            </div>
+            <div class="glass-card" style="height: 100%;">
+              <div class="card-title" style="color: var(--success);"><i class="fa-solid fa-forward-step"></i> Future Scope & Roadmap</div>
+              <ul class="slide-list" style="margin-top: 1rem;">
+                <li><strong>POS Barcode Integration:</strong> Sync database directly with the physical store POS checkout system, automatically reducing stock counts on checkout.</li>
+                <li><strong>Multi-Manager Role Control:</strong> Add role-based authentication layers separating head manager (who can delete stock) from shop assistants (who only adjust stock counts).</li>
+                <li><strong>Dynamic Analytics Dashboard:</strong> Provide analytics charts for store owners showing which counter QR codes get scanned most often during peak hours.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 15: Deliverables Checklist -->
+      <section class="slide" id="slide-15">
+        <div style="width: 100%; max-width: 1100px;">
+          <h2>Deliverables & Closure Check</h2>
+          <p style="margin-bottom: 2.5rem;">All final deliverables required prior to internship graduation review. Click items to toggle progress.</p>
+          
+          <div class="checklist-container">
+            <div class="checklist-items">
+              <div class="checklist-item checked" data-index="0">
+                <div class="checkbox-custom"></div>
+                <div class="checklist-text">Complete Working System (Fully-tested production catalog app)</div>
+              </div>
+              <div class="checklist-item checked" data-index="1">
+                <div class="checkbox-custom"></div>
+                <div class="checklist-text">Final Project Report (Details architecture decisions & research logs)</div>
+              </div>
+              <div class="checklist-item checked" data-index="2">
+                <div class="checkbox-custom"></div>
+                <div class="checklist-text">As-Built Architecture Diagram (Component levels & data flows)</div>
+              </div>
+              <div class="checklist-item checked" data-index="3">
+                <div class="checkbox-custom"></div>
+                <div class="checklist-text">Database Schema & ERD Model (Entity definitions & PK/FK relationships)</div>
+              </div>
+              <div class="checklist-item checked" data-index="4">
+                <div class="checkbox-custom"></div>
+                <div class="checklist-text">Testing Evidence Logs (Full browser and responsive validation passes)</div>
+              </div>
+              <div class="checklist-item checked" data-index="5">
+                <div class="checkbox-custom"></div>
+                <div class="checklist-text">Demo Backup Recording (5-minute video presentation backup)</div>
+              </div>
+            </div>
+
+            <div class="checklist-gauge">
+              <div class="gauge-title">Graduation Readiness</div>
+              <div class="gauge-outer">
+                <div class="gauge-ring" id="gaugeRing">
+                  <div class="gauge-inner">
+                    <span class="gauge-percent" id="gaugePercent">100%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="gauge-status" id="gaugeStatus">READY FOR FINAL REVIEW</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 16: Live Demo Script & Simulator -->
+      <section class="slide" id="slide-16">
+        <div style="width: 100%; max-width: 1100px;">
+          <h2>Live Demo Pitch Rehearsal Simulator</h2>
+          <p style="margin-bottom: 1.5rem;">Practice timing your 5-6 minute walkthrough using this interactive script builder.</p>
+          
+          <div class="script-grid">
+            <div class="script-inputs">
+              <div class="form-group">
+                <label for="sysName">System Name</label>
+                <input type="text" id="sysName" value="Om Chanukya Traders Live Catalog">
+              </div>
+              <div class="form-group">
+                <label for="startScreen">Starting Screen</label>
+                <input type="text" id="startScreen" value="Mobile Landing Catalog">
+              </div>
+              <div class="form-group">
+                <label for="firstAction">Customer Primary Action</label>
+                <input type="text" id="firstAction" value="scan the counter QR code and select apparel category tab">
+              </div>
+              <div class="form-group">
+                <label for="secondAction">Admin Primary Action</label>
+                <input type="text" id="secondAction" value="log in securely, enter admin mode, and reduce the linen shirt stock count">
+              </div>
+              <div class="form-group">
+                <label for="techDecision">Technical Decision Explained</label>
+                <input type="text" id="techDecision" value="caching the inventory list locally for fast suggestions">
+              </div>
+            </div>
+
+            <div class="script-preview">
+              <div class="script-text" id="scriptText">
+                Loading practice script template...
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 17: Readiness Scorecard Simulator -->
+      <section class="slide" id="slide-17">
+        <div style="width: 100%; max-width: 1100px;">
+          <h2>Reviewer Evaluation Scorecard Simulator</h2>
+          <p style="margin-bottom: 1.5rem;">Rate your preparation across the 11 review criteria to check your scores.</p>
+          
+          <div class="scorecard-layout">
+            <div class="criteria-list" id="criteriaList">
+              <!-- Criteria rows injected dynamically -->
+            </div>
+            
+            <div class="scorecard-result">
+              <div class="score-meter">
+                <div class="score-circle" id="scoreCircle">
+                  <div class="score-circle-inner">
+                    <span class="score-number" id="scoreNumber">5.0</span>
+                    <span class="score-label">Average</span>
+                  </div>
+                </div>
+              </div>
+              <div class="score-message" id="scoreMessage">EXCELLENT PREPARATION</div>
+              <div class="score-tip" id="scoreTip">You have met every standard required. Ready to ace the review board.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 18: Closing & Thank You -->
+      <section class="slide" id="slide-18">
+        <div class="fade-in-el" style="text-align: center; max-width: 900px;">
+          <div style="font-size: 3.5rem; color: var(--accent-primary); margin-bottom: 1.5rem;">ॐ</div>
+          <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem;">Thank You!</h1>
+          <p style="font-size: 1.5rem; color: var(--text-primary); margin-bottom: 1rem;">Questions & Answers Session</p>
+          <div style="width: 80px; height: 2px; background: var(--accent-gradient); margin: 2.5rem auto;"></div>
+          
+          <div class="glass-card" style="margin: 0 auto; max-width: 600px; padding: 1.5rem;">
+            <p style="font-style: italic; color: var(--accent-primary); font-size: 1.1rem; font-weight: 500; margin-bottom: 10px;">The Golden Rule for Closing Strong</p>
+            <p style="font-size: 0.95rem; line-height: 1.5;">"If your system runs, you can explain every technical decision in it, and speak honestly about what you would do differently — you are ready."</p>
+          </div>
+          
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 2rem;">Om Chanukya Traders | Store Inventory Catalog Closure Presentation</p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- HUD Footer -->
+    <footer class="hud-footer">
+      <div class="nav-arrows">
+        <button class="nav-arrow-btn" id="prevBtn" title="Previous Slide (Left Arrow / Page Up)">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="nav-arrow-btn" id="nextBtn" title="Next Slide (Right Arrow / Space / Page Down)">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="progress-bar-container">
+        <div class="progress-fill" id="progressBar"></div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <select id="slideSelect" class="hud-btn" style="padding: 8px 12px; cursor: pointer; border: 1px solid var(--border-color); outline: none;">
+          <!-- Injected dynamically -->
+        </select>
+        <div class="slide-counter" id="slideCounter">Slide 1 of 18</div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- PRESENTER MODE CONSOLE OVERLAY -->
+  <div class="presenter-overlay" id="presenterOverlay">
+    <div class="presenter-main">
+      <div class="presenter-slide-view">
+        <iframe src="index.html" class="presenter-slide-frame" id="presenterFrame"></iframe>
+      </div>
+      <div class="presenter-controls">
+        <div style="display: flex; gap: 10px;">
+          <button class="hud-btn" id="presPrevBtn"><i class="fa-solid fa-chevron-left"></i> Prev</button>
+          <button class="hud-btn" id="presNextBtn">Next <i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+        <div class="slide-counter" id="presSlideCounter">Slide 1 of 18</div>
+        <button class="hud-btn" id="closePresenterBtn" style="border-color: var(--error); color: var(--error);"><i class="fa-solid fa-xmark"></i> Exit Presenter Mode</button>
+      </div>
+    </div>
+    
+    <div class="presenter-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-title">Presentation Timer</div>
+        <div class="timer-display" id="timerDisplay">00:00:00</div>
+        <div class="timer-controls">
+          <button class="hud-btn" id="timerStartBtn"><i class="fa-solid fa-play"></i> Start</button>
+          <button class="hud-btn" id="timerPauseBtn"><i class="fa-solid fa-pause"></i> Pause</button>
+          <button class="hud-btn" id="timerResetBtn"><i class="fa-solid fa-arrow-rotate-right"></i> Reset</button>
+        </div>
+      </div>
+
+      <div class="sidebar-section" style="flex: 1; display: flex; flex-direction: column;">
+        <div class="sidebar-title">Speaker Notes</div>
+        <div style="flex: 1; background: rgba(0,0,0,0.1); border: 1px solid var(--border-color); border-radius: 8px; padding: 15px; overflow-y: auto;">
+          <div class="speaker-notes-content" id="speakerNotes">Notes will sync with slides.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>
